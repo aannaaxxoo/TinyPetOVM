@@ -1,0 +1,12 @@
+.nav-link {
+    color : white !important
+}
+.active {
+    color : #212529 !important
+}
+.marge-haute-petit {
+    padding-top: 7px
+}
+.align-droite {
+    text-align: right;
+}
