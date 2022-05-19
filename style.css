@@ -1,12 +1,28 @@
 .nav-link {
-    color : white !important
+    color : white !important;
+}
+.nav-link-noir {
+    color : #212529 !important;
 }
 .active {
-    color : #212529 !important
+    color : #212529 !important;
 }
 .marge-haute-petit {
-    padding-top: 7px
+    padding-top: 7px;
 }
-.align-droite {
-    text-align: right;
+.marge-haute-moyenne {
+    padding-top: 15px;
+}
+.marge-gauche {
+    padding-left: 10px;
+}
+.marge-droite {
+    padding-right: 10px;
+}
+.active-underline {
+    text-decoration: underline;
+    text-decoration-color: #E34234;
+}
+.pas-souligne {
+    text-decoration: none !important;
 }

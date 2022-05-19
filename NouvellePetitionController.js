@@ -50,23 +50,25 @@
 
 	/** 
 	 * Controller de la vue Saisie
-	 * @param petService : le service de gestion des tâches
+	 * @param petService : le service de gestion des pétitions
 	*/
 	PetController.$inject = ['$scope','petService'];
 	function PetController($scope, petService) {
 		// capture de l'attribut this
 		var vm = this;
-		// objet correspondant à une tâche
+		// objet correspondant à une pétition
 		vm.pet = {
 			titre:'',
 			description : '',
 			image:'',
 			objectif:'',
-			afficheNom:''
+			auteur:'', //récupéré par google
+			dateCrea: moment().format('L'), //date du jour au format JJ/MM/AAAA
+			nbSignatures: 0
 		};
 
 		vm.isDateInvalide = false;
-		// La liste des priorités possibles d'une tâche
+		// La liste des priorités possibles d'une pétition
 		vm.prios = [{name:"Faible", value:"Faible"}, {name:"Moyenne", value:"Moyenne"}, {name:"Haute", value:"Haute"}];
 		vm.pets = [];
 
@@ -99,7 +101,7 @@
 			}
 		}
 
-		// Verifications à effectuer avant de pouvoir créer la tâche
+		// Verifications à effectuer avant de pouvoir créer la pétition
 		function checkSubmit(petition) {
 			console.log('checkSubmit');
 			console.log(petition);
@@ -115,10 +117,12 @@
 
 		function clear() {
 			vm.pet = {
-				libelle:'',
-				priorite : '',
-				echeance:'',
-				dateEcheance:''
+				titre:'',
+				description : '',
+				image:'',
+				objectif:'',
+				auteur:'',
+				dateCrea: moment().format('L') //date du jour au format JJ/MM/AAAA
 			};
 			vm.formHasError = false;
 			vm.isDateInvalide = false;
