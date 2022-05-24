@@ -49,7 +49,7 @@
 
         //a récuperer depuis le back
         vm.listePetitions = [
-            {titre:'titre3',description : 'description3',image:'image3',objectif:'3',auteur:'moi',dateCrea:'03/03/2022',nbSignature:3},
+            {titre:'titre3',description : 'description3',image:'https://img.fotocommunity.com/les-coquelicots-de-warlaing-727050f3-8719-40fc-a218-824a29733583.jpg?height=1080',objectif:'3',auteur:'moi',dateCrea:'03/03/2022',nbSignature:3},
             {titre:'titre2',description : 'description2',image:'image2',objectif:'2',auteur:'auteur2',dateCrea:'02/02/2022',nbSignature:2},
             {titre:'titre4',description : 'description4',image:'image4',objectif:'4',auteur:'moi',dateCrea:'04/04/2022',nbSignature:4},
             {titre:'titre1',description : 'description1',image:'image1',objectif:'1',auteur:'auteur1',dateCrea:'01/01/2022',nbSignature:1}

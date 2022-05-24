@@ -49,12 +49,14 @@
 
 			<section id="main">
 				<div ng-repeat="petition in affPetCtrl.listePetitions | orderBy : 'dateCrea'">
-					{{petition.titre}}
-					{{petition.description}}
-					{{petition.image}}
-					{{petition.objectif}}
-					{{petition.auteur}}
-					{{petition.dateCrea}}
+					<div style="text-align:center">
+					<h1>{{petition.titre}}</h1></br>
+					<img class="banderole" src={{petition.image}}></br>
+					{{petition.description}}</br>
+					nombre de signature : {{petiton.nbSignatures}} sur {{petition.objectif}}</br></br>
+
+					<small>créée par {{petition.auteur}}, le {{petition.dateCrea}}</small></br>
+					</div>
 				</div>
 			</section>
 

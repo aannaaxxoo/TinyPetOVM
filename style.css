@@ -26,3 +26,7 @@
 .pas-souligne {
     text-decoration: none !important;
 }
+.banderole {
+    width: 620px;
+    height: 300px;
+}
