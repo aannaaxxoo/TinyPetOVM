@@ -3,7 +3,20 @@
 
 	var app = angular.module('petApp', []);
 	app.service('petService', PetService);
-	app.controller('affPetController', AffPetController);
+	app.controller('mesPetController', MesPetController);
+
+    //pour filtrer sur l'auteur mais idealement c'est a gerer dans le back je pense
+    app.filter('filtreAuteur', function(){
+        return function(pet) {
+            var retour = [];
+            pet.forEach(petition => {
+                if(petition.auteur == 'moi'){ //à remplacer par l'id google
+                    retour.push(petition);
+                }
+            });
+            return retour;
+        }
+    })
 
     /** 
 	 * Service de stockage des petitions
@@ -32,8 +45,8 @@
 	 * Controller de la vue Saisie
 	 * @param petService : le service de gestion des pétitions
 	*/
-	AffPetController.$inject = ['$scope','petService'];
-	function AffPetController($scope, petService) {
+	MesPetController.$inject = ['$scope','petService'];
+	function MesPetController($scope, petService) {
 		// capture de l'attribut this
 		var vm = this;
 		// objet correspondant à une pétition
