@@ -13,6 +13,9 @@
 .marge-haute-moyenne {
     padding-top: 15px;
 }
+.marge-haute {
+    padding-top: 10px !important;
+}
 .marge-gauche {
     padding-left: 10px;
 }
@@ -26,7 +29,6 @@
 .pas-souligne {
     text-decoration: none !important;
 }
-.banderole {
-    width: 620px;
-    height: 300px;
+.card-img-top {
+    object-fit: cover;
 }

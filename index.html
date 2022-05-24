@@ -47,17 +47,24 @@
 				</li>
 			</ul>
 
-			<section id="main">
-				<div ng-repeat="petition in affPetCtrl.listePetitions | orderBy : 'dateCrea'">
-					<div style="text-align:center">
-					<h1>{{petition.titre}}</h1></br>
-					<img class="banderole" src={{petition.image}}></br>
-					{{petition.description}}</br>
-					nombre de signature : {{petiton.nbSignatures}} sur {{petition.objectif}}</br></br>
-
-					<small>créée par {{petition.auteur}}, le {{petition.dateCrea}}</small></br>
+			<section id="main" class="marge-gauche">
+				<div class="row row-cols-1 row-cols-lg-4 align-items-stretch">
+					<div ng-repeat="petition in affPetCtrl.listePetitions | orderBy : 'dateCrea'">
+						<div class="col-md-4 mt-3">
+							<div class="card" style="width: 18rem;">
+								<img src="{{petition.image}}" class="card-img-top" alt="">
+								<div class="card-body">
+									<h5 class="card-title">{{petition.titre}}</h5>
+									<p class="card-text">{{petition.description}}</p>
+									<p class="card-text">nombre de signature : {{petiton.nbSignature}} sur
+										{{petition.objectif}}</p>
+									<small class="card-text">créée par {{petition.auteur}}, le
+										{{petition.dateCrea}}</small></br>
+									<a href="#" class="btn btn-primary mt-1">Signer</a>
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
 			</section>
 
 			<!--
