@@ -60,7 +60,7 @@
 										{{petition.objectif}}</p>
 									<small class="card-text">créée par {{petition.auteur}}, le
 										{{petition.dateCrea}}</small></br>
-									<a href="#" class="btn btn-primary mt-1">Signer</a>
+									<a ng-click="affPetCtrl.signer(petition.id,'user')" class="btn btn-primary mt-1">Signer</a>
 								</div>
 							</div>
 						</div>
