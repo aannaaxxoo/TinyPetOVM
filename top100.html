@@ -27,7 +27,7 @@
                         <a class="nav-link active" href="index.html">Parcourir les pétitions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" ng-disabled="PasCo" href="#">Mes pétitions</a>
+                        <a class="nav-link" ng-disabled="PasCo" href="mesPetitions.html">Mes pétitions</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" ng-disabled="PasCo" href="nouvellePetition.html">Nouvelle pétition</a>
@@ -47,16 +47,26 @@
                 </li>
             </ul>
 
-            <section id="main">
-				<div ng-repeat="petition in affPetCtrl.listePetitions | orderBy : 'nbSignatures' | limitTo : 3">
-					{{petition.titre}}
-					{{petition.description}}
-					{{petition.image}}
-					{{petition.objectif}}
-					{{petition.auteur}}
-					{{petition.dateCrea}}
-				</div>
-			</section>
+            <section id="main" class="marge-gauche">
+                <div class="row row-cols-1 row-cols-lg-4 align-items-stretch">
+                    <div ng-repeat="petition in affPetCtrl.listePetitions | orderBy : '-nbSignature' | limitTo : 100">
+                        <div class="col-md-4 mt-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{{petition.image}}" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{petition.titre}}</h5>
+                                    <p class="card-text">{{petition.description}}</p>
+                                    <p class="card-text">nombre de signature : {{petition.nbSignature}} sur
+                                        {{petition.objectif}}</p>
+                                    <small class="card-text">créée par {{petition.auteur}}, le
+                                        {{petition.dateCrea}}</small></br>
+                                    <a href="#" class="btn btn-primary mt-1">Signer</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
            
 
             <!--

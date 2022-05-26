@@ -39,17 +39,17 @@
 			</nav>
 			<ul class="nav justify-content-center marge-haute-moyenne">
 				<li class="nav-item">
-					<h3><a class="nav-link-noir marge-droite active-underline" href="mesPetitions.html">Mes pétitions</a></h3>
+					<h3><a class="nav-link-noir marge-droite pas-souligne" href="mesPetitions.html">Mes pétitions</a></h3>
 				</li>
 				<h3>|</h3>
 				<li class="nav-item">
-					<h3><a class="nav-link-noir marge-gauche pas-souligne" href="lesSignees.html">Les signées</a></h3>
+					<h3><a class="nav-link-noir marge-gauche active-underline" href="">Les signées</a></h3>
 				</li>
 			</ul>
 
 			<section id="main" class="marge-gauche">
                 <div class="row row-cols-1 row-cols-lg-4 align-items-stretch">
-                    <div ng-repeat="petition in mesPetCtrl.listePetitions | orderBy : '-dateCrea' | filtreAuteur">
+                    <div ng-repeat="petition in mesPetCtrl.listePetitionsSignees | orderBy : '-dateSignature'">
                         <div class="col-md-4 mt-3">
                             <div class="card" style="width: 18rem;">
                                 <img src="{{petition.image}}" class="card-img-top" alt="">
